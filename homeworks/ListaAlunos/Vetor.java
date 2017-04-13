@@ -12,7 +12,7 @@ public class Vetor {
         
     }
 	
-	public void adiciona(int posicao, Aluno aluno) {
+	public void adiciona(int posicao, Aluno aluno) { 
     if (alunos[posicao] != null){
       System.out.println("Erro, posição já foi ocupada!");
     }
@@ -21,16 +21,27 @@ public class Vetor {
     }
 	}
 	public Aluno pega(int posicao) {
-    return null;
+    return this.alunos[posicao]; //Testando a keyword this
 	}
-	public void remove(int posicao) {
-	  return;
+	public void remove(int posicao) { //Sem this dessa vez
+	  alunos[posicao] = null;
 	}
 	public boolean contem(Aluno aluno) {
+	  for(int i=0;i<alunos.length;i++){
+	    if(aluno == alunos[i]){
+	      return true;
+	    }
+	  }
     return false;
 	}
-	public int tamanho() {
-    return 0;
+	public int tamanho() { //Outro teste com "this"
+	  int size=0;
+	  for(int i=0;i<this.alunos.length;i++){
+	    if(this.alunos[i] != null){
+	      size ++;
+	    }
+	  }
+    return size;
 	}
 	public String toString() {
 		return Arrays.toString(alunos);
