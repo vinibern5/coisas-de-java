@@ -14,7 +14,7 @@ public class Vetor {
 	
 	public void adiciona(int posicao, Aluno aluno) {
     if (alunos[posicao] != null){
-      System.out.printf("Erro, posição já foi ocupada!");
+      System.out.println("Erro, posição já foi ocupada!");
     }
     else{
       alunos[posicao] = aluno;
