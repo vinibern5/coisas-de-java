@@ -40,6 +40,9 @@ public class Main{
 	  a6.setNome("Capaldão");
 	  lista.adiciona(a6); //Será adicionado na posição 0, pois a mesma está vazia!
 	  System.out.printf("%s \n\n",lista); //Mostrar a lista
+	  if(lista.contem("Capaldão")){ //Verifica se "Capaldão" está na lista
+	    System.out.println("Capaldão está presente!" + '\n');
+	  }
 	  System.out.println("Size: " + lista.tamanho() + '\n'); //Quantidade de elementos na nossa lista!
 	  
 	  
