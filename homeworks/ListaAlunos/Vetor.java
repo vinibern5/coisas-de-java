@@ -34,6 +34,16 @@ public class Vetor {
 	  }
     return false;
 	}
+	
+	public boolean contem(String aluno){ //Verificar se dado nome x está na nossa lista
+	  for(int i=0;i<alunos.length;i++){
+	    if(alunos[i] != null && aluno.equals(alunos[i].getNome())){ //Equals "melhor" que usar == pra comparar string? 
+	      return true;
+	    }
+	  }
+    return false;
+	}
+	
 	public int tamanho() { //Outro teste com "this"
 	  int size=0;
 	  for(int i=0;i<this.alunos.length;i++){
